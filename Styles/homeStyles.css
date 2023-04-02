@@ -1,0 +1,817 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #377095;
+}
+
+/* ----------- SECTION 1 --------- */
+/* #region intro */
+#sec1{
+    height: 90.2vh;
+    padding-bottom: 10vh;
+}
+
+.containerSec1{
+    position: relative;
+    top: 4vw;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.quote{ 
+    font-size: 2.35vw;
+    background-image: url('../Images/Steam.png');
+    /* background-size: 34vw 48vh; */
+    background-position: 49.8% -100%;
+    background-repeat: no-repeat;
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    animation: slideUp 6s forwards;
+}
+
+@keyframes slideUp{
+    0%{
+        opacity: 0;
+    }
+    40%{
+        background-size: 20vw 48vh;
+    }
+    100%{
+        opacity: 1;
+        background-size: 46vw 48vh;
+        background-position: 49.8% 100%;
+    }
+}
+
+.cup{
+    margin: auto;
+    height: 30vh;
+    width: 16vw;
+    background-image: url("../Images/Coffee.png");
+    background-size: 105%;
+    background-repeat: repeat-x;
+    background-position: 0px 30vh;
+    border: solid 5px #377095;
+    box-shadow: 0px 0px 0px 8px white;
+    margin-top: 8px;
+    border-radius: 0 0 80px 80px;
+    animation: fill 5s ease;
+    animation-fill-mode: forwards;
+    margin-bottom: 3vh;
+}
+
+@keyframes fill{
+    100%{
+        background-position: 40vw -10vh;
+    }
+}
+
+.handle{
+    width: 5vw;
+    height: 15vh;
+    margin-left: 16.5vw;
+    border-radius: 0 10px 40px 0;
+    border: solid white 6px;
+}
+
+.linkArrow{
+    text-decoration: none;
+}
+
+.downArrow{
+    animation: comeDown 4s infinite;
+    color: white;
+}
+
+@keyframes comeDown{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(3vh);
+    }
+}
+/* #endregion intro */
+
+/* ---------- SECTION 2 - HOME ----------*/
+/* #region Home*/
+#sec2{
+    width: 100%;
+    height: 100vh;
+    background-color: #c4973e;
+    display: flex;
+} 
+
+.photoHome_container{
+    flex: 1;
+}
+
+/*.images{
+    display: flex;
+    overflow: hidden;
+    transform: translate(-100%, 50%);
+    width: 45vw;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.4);
+    animation: moveRight 4s ease forwards;
+}*/
+
+.photoHome{
+    width: 42vw;
+    height: 50vh;
+    transform: translate(-102%, 50%);
+    -ms-transform: translate(-102%, 50%);
+    top: 50%;
+    border-radius: 20px;
+    box-shadow: 10px 10px #00000066;
+    transition: 0.3s;
+}
+
+.photoAnim{
+    animation: moveRight 4s ease forwards;
+}
+
+@keyframes moveRight{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(5%, 50%);
+    }
+}
+
+.allP_container_Home{
+    flex: 1;
+    padding-top: 25vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.pHome{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pHomeHead{
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    background-image: url("../Images/Bg\ Head.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 10vh;
+    opacity: 0;
+}
+
+.headAnim{
+    animation: headRevealHome 7s forwards;
+}
+
+@keyframes headRevealHome{
+    0%{
+        opacity: 1;
+        color: #ffffff00;
+    }
+    99.99%{
+        color: #ffffffff;
+        background-position: -200% 0;
+    }
+    100%{
+        opacity: 1;
+        color: white;
+        background-image: none;
+    }
+}
+
+.pHomeContainer{
+    background-color: #c4973e;
+}
+
+.pHomeContent{
+    opacity: 0;
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+.pHomeContentAnim{
+    animation: contentRevealHome 5s forwards;
+}
+
+@keyframes contentRevealHome{
+    0%{
+        opacity: 1;
+        transform: translateY(15vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* #endregion Home*/
+
+/* ---------- SECTION 3 - MENU ----------*/
+/*#region Menu*/
+
+#sec3{
+    width: 100%;
+    height: 100vh;
+    background-color: #377095;
+    display: flex;
+} 
+
+.p_container_1Menu{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+}
+
+#p1Menu{
+    flex: 1;
+    padding-top: 10vh;
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    font-family: 'Pacifico', cursive ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#imgMenu{
+    flex: 1;
+}
+
+#imgMenu img{
+    width: 28vw;
+    height: 40vh;
+}
+
+.menu_container{
+    flex: 1;
+    background-color: #4472a3;
+}
+
+.p_container_2Menu{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.p_container_2Menu p{
+    padding-left: 2vw;
+    color: white;
+    font-size: 2vw;
+    font-family: 'Pacifico', cursive ,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* --- Main menu --- */
+.menu_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_main_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+.menuButton{
+    width: 10vw;
+    height: 20vh;
+    font-size: 5vw;
+    color: white;
+    border: none;
+    transition: 0.3s;
+    background: none;
+    user-select: none;
+}
+
+.menuButton:focus{
+    outline: none;
+}
+
+.menuButton:active{
+    font-size: 3vw;
+}
+
+#main_imgMenu{
+    margin-top: 3vh;
+    width: 25vw;
+    height: 85vh;
+    box-shadow: 0 0 8px 8px white;
+}
+
+.indicator_container{
+    flex: 0.05;
+    display: flex;
+    justify-content: center;
+}
+
+.indicator{
+    margin-right: 1.1vw;
+    border-radius: 100px;
+    border: white solid 3px;
+    width: 0.5vw;
+    height:0.5vw;
+}
+
+/*#endregion Menu*/
+
+/* ---------- SECTION 4 - ABOUT ----------*/
+/*#region About*/
+#sec4{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffa600b6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} 
+
+.container_About{
+    display: flex;
+    opacity: 0;
+}
+
+.img-container{
+    flex: 1;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.writingAbout{
+    color: white;
+    flex: 1;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.writingAbout h2{
+    font-size: 2vw;
+}
+
+.writingAbout p{
+    font-size: 1.3vw;
+    text-align: justify;
+}
+
+/* ONE */
+#container_1About img{
+    border-radius: 5px;
+    width: 26vw;
+    height: 28vh;
+    box-shadow: 8px 8px #00000066;
+}
+
+#about1{
+    padding-left: 3%;
+}
+
+/* TWO */
+#container_2About img{
+    border-radius: 5px;
+    width: 26vw;
+    height: 30vh;
+    box-shadow: 8px 8px #00000066;
+}
+
+#about2{
+    padding-right: 3%;
+}
+
+/* THREE */
+#container_3About img{
+    border-radius: 5px;
+    width: 14vw;
+    min-width: 200px;
+    height: 30vh;
+    box-shadow: 8px 8px #00000066;
+}
+
+#about3{
+    padding-left: 3%;
+}
+
+.imgAboutAnim{
+    animation: show 3s forwards;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/*#endregion About*/
+
+/* ---------- SECTION 5 - CONTACT ----------*/
+/*#region Contact*/
+
+#sec5{
+    width: 100%;
+    height: 100vh;
+    background-color: #377095;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    background-image: url("../Images/Foods/Chocolate.png");
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    background-size: 35vw 40vh;
+} 
+
+.map iframe{
+    padding-top: 10vh;
+    padding-left: 14%;
+    display: block;
+    width: 35%;
+    height: 40vh;
+    border: 5px solid #272726;
+}
+
+.contact-main{
+    padding-top: 4vh;
+    display: flex;
+    font-size: 1.8vw;
+}
+
+.info{
+    flex: 2;
+}
+
+.info p{
+    padding-left: 12%;
+}
+
+.vl{
+    flex: 0.2;
+    border-left: 3px solid #ffffff; 
+    height: 36vh;
+}
+
+.hl{
+    display: none;
+}
+
+form{
+    flex: 1;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: center;
+}
+
+.socialMedia a{
+    font-size: 2vw;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+    padding: 0 2%;
+    height: 4.5vh;
+    border-radius: 10px;
+    align-items: center;
+    padding-top: 1.3vh;
+}
+
+#facebook:hover{
+    background-color: #0044ff;
+}
+
+#twitter{
+    padding-left: 0.85vw;
+    width: 1.5vw;
+}
+
+#twitter:hover{
+    background-color: #00a2f3;
+}
+
+#instagram:hover{
+    background-image: linear-gradient(to top right, #f7d400, #ed1732 , #8541be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+form input{
+    width: 15vw;
+    height: 2vh;
+    color: white;
+    margin-bottom: 1vh;
+    background-color: #377095;
+    border: 3px white solid ;
+}
+
+#sec5 form input::placeholder{
+    color: white;
+}
+
+form textarea{
+    width: 15vw;
+    height: 15vh;
+    color: white;
+    background-color: #377095;
+    border: 3px white solid ;
+    resize: none;
+}
+
+#sec5 form textarea::placeholder{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+#submitBtn{
+    width: 3vw;
+    min-width: 45px;
+    height: 3vh;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+#submitBtn:hover{
+    background-color: white;
+    color: #377095;
+}
+
+/*#endregion Contact*/
+
+/* ---------------------- MEDIA RULE ------------------------------- */
+
+@media only screen and (max-width: 1400px){
+    #imgMenu img{
+        padding-top: 10vh;
+        width: 20vw;
+        height: 20vh;
+    }
+
+    .menu_container{
+        flex: 3;
+    }
+
+    #main_imgMenu{
+        width: 35vw;
+        height: 85vh;
+    }
+
+    .writingAbout h2{
+        font-size: 1.8vw;
+    }
+    
+    .writingAbout p{
+        font-size: 1.8vw;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    /*------------- INTRO -------------------*/
+    /* #region intro*/
+        .quote{
+            font-size: 4vw;
+        }
+
+        @keyframes slideUp{
+            0%{
+                opacity: 0;
+            }
+            40%{
+                background-size: 20vw 48vh;
+            }
+            100%{
+                opacity: 1;
+                background-size: 86vw 48vh;
+                background-position: 49.8% 100%;
+            }
+        }
+
+        .cup{
+            background-size: auto 200%;
+            width: 36vw;
+        }
+
+        .handle{
+            margin-left: 37.5vw;
+        }
+
+        .downArrow{
+            font-size: 12vw;
+        }
+    /* #endregion intro*/
+    
+    /*----------------- HOME -----------------*/
+    /* #region home*/
+        #sec2{
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .photoHome{
+            margin-left: 3%;
+            width: 80vw;
+            height: 40vh;
+            transform: translate(-101%, 20%);
+            -ms-transform: translate(-101%, 20%);
+            top: 20%;
+        }
+
+        .allP_container_Home{
+            flex: 1;
+            padding-top: 2vh;
+            padding-left: 2vw;
+            padding-right: 2vw;
+        }
+        
+        .pHome{
+            font-size: 2.3vw;
+        }
+
+        @keyframes moveRight{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+                transform: translate(5%, 20%);
+            }
+        }
+    /* #endregion home*/
+
+    /*----------------- MENU -----------------*/
+    /* #region menu*/
+        #sec3{
+            flex-direction: column;
+        } 
+
+        #p1Menu{
+            padding-top: 1vh;
+            font-size: 5vw;
+            background-image: url("../Images/Foods/Donut.png");
+            background-repeat: no-repeat;
+            background-size: 16vw 16vh;
+        }
+
+        #imgMenu{
+            display: none;
+        }
+
+        #main_imgMenu{
+            margin-top: 0.5vh;
+            width: 30vw;
+            min-width: 40vw;
+            height: 65vh;
+        }
+
+        .p_container_2Menu{
+            justify-content: center;
+        }
+
+        .p_container_2Menu p{
+            font-size: 4vw;
+        }
+    /* #endregion menu*/
+
+    /*----------------- ABOUT -----------------*/
+    /* #region about*/
+        .container_About{
+            flex-direction: column;
+        }
+
+        .writingAbout h2{
+            font-size: 2.3vw;
+        }
+        
+        .writingAbout p{
+            font-size: 2.2vw;
+        }
+
+        #container_2About{
+            flex-direction: column-reverse;
+        }
+
+        /* ONE */
+        #container_1About img{
+            border-radius: 5px;
+            width: 30vw;
+            min-width: 42vw;
+            height: 18vh;
+            box-shadow: 8px 8px #00000066;
+        }
+
+        #about1{
+            padding-right: 3%;
+            padding-left: 3%;
+        }
+
+        /* TWO */
+        #container_2About img{
+            border-radius: 5px;
+            width: 30vw;
+            min-width: 42vw;
+            height: 18vh;
+            box-shadow: 8px 8px #00000066;
+        }
+
+        #about2{
+            padding-right: 3%;
+            padding-left: 3%;
+        }
+
+        /* THREE */
+        #container_3About img{
+            border-radius: 5px;
+            width: 24vw;
+            min-width: 30vw;
+            height: 20vh;
+            box-shadow: 8px 8px #00000066;
+        }
+
+        #about3{
+            padding-right: 3%;
+            padding-left: 3%;
+        }
+
+        .indicator_container{
+            padding-top: 1.8vh;
+            padding-bottom: 1.8vh;
+        }
+
+        .indicator{
+            border: white solid 1.2px;
+        }
+    /* #endregion about*/
+
+    /* -----------CONTACTS------------ */
+    /* #region contacts*/
+    #sec5{
+        background-image: none;
+    }
+    
+    .contact-main{
+        padding-top: 4vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map iframe{
+        padding-left: 8%;
+        width: 80vw;
+    }
+
+    .info p{
+        font-size: 3vw;
+    }
+
+    .socialMedia a{
+        font-size: 4vw;
+        height: 2.6vh;
+        padding-bottom: 0.5vh;
+        margin-bottom: 1vh;
+    }
+
+    #twitter{
+        width: 2.6vw;
+    }
+
+    .hl{
+        display: block;
+        background-color: white;
+        height: 0.3vh;
+        border: none;
+        margin: auto;
+        width: 80%;
+    }
+
+    form{
+        padding-top: 0.6vh;
+        padding-left: 30%;
+    }
+
+    form p{
+        font-size: 4vw;
+    }
+
+    form input{
+        margin-left: 8%;
+        min-width: 30vw;
+    }
+
+    form textarea{
+        height: 9vh;
+        margin-left: 8%;
+        min-width: 30vw;
+    }
+    /* #endregion contacts*/
+}
